@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import "./ContentArea.css";
 
-function ContentArea() {
+function ContentArea(props) {
   const [data, setData] = useState([]);
 
   const getApi = () => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch(`http://www.omdbapi.com/?s=starwars&apikey=195d91d3`)
       .then((response) => response.json())
       .then((json) => setData(json));
   };
@@ -14,9 +14,11 @@ function ContentArea() {
   useEffect(() => {
     getApi();
   }, []);
+
   return (
     <div className="area">
-      <p>{JSON.stringify({ data })}</p>
+      <pre>{JSON.stringify({data})}</pre>
+      {/* <img src={data.Poster} alt="movies"></img> */}
     </div>
   );
 }
