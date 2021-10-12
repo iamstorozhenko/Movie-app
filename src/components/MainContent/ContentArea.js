@@ -6,17 +6,13 @@ import "./ContentArea.css";
 function ContentArea(props) {
   const [data, setData] = useState([]);
 
-  const getApi = () => {
-    fetch(`http://www.omdbapi.com/?s=office&apikey=195d91d3`)
-      .then((res) => res.json().Search)
-      .then((data) => {
-        console.log(data);
-        setData(data);
-      });
-  };
-
   useEffect(() => {
-    getApi();
+    fetch(`http://www.omdbapi.com/?s=venom&apikey=195d91d3`)
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        setData(result.Search);
+      });
   }, []);
   return (
     <div className="area">
