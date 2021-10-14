@@ -8,7 +8,7 @@ function MainContent() {
   const [value, setValue] = useState("");
 
   const movieReq = async (value) => {
-    const url = `http://www.omdbapi.com/?s=${value}&apikey=195d91d3`;
+    const url = `https://www.omdbapi.com/?s=${value}&apikey=195d91d3`;
 
     const res = await fetch(url);
     const resJson = await res.json();
