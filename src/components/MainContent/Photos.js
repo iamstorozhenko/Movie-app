@@ -3,8 +3,8 @@ import React from "react";
 const Photos = (props) => {
   return (
     <div>
-      {props.data.map((data) => (
-        <img src={data.Poster} alt="movies"></img>
+      {props.image.map((image) => (
+        <img src={image.Poster} alt="movies"></img>
       ))}
     </div>
   );
