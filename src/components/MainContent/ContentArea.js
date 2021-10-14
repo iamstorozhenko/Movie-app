@@ -24,14 +24,12 @@ function MainContent() {
 
   return (
     <div className="wrapper">
-      <form>
-        <input
-          className="input-search"
-          value={value}
-          placeholder="Search..."
-          onChange={(event) => setValue(event.target.value)}
-        />
-      </form>
+      <input
+        className="input-search"
+        value={value}
+        placeholder="Search..."
+        onChange={(event) => setValue(event.target.value)}
+      />
       <div className="area">
         <Photos image={data} />
       </div>
