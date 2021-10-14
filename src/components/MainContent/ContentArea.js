@@ -23,14 +23,18 @@ function MainContent() {
   }, [value]);
 
   return (
-    <div className="area">
-      <input
-        className="input-search"
-        value={value}
-        placeholder="search..."
-        onChange={(event) => setValue(event.target.value)}
-      />
-      <Photos image={data} />
+    <div className="wrapper">
+      <form>
+        <input
+          className="input-search"
+          value={value}
+          placeholder="Search..."
+          onChange={(event) => setValue(event.target.value)}
+        />
+      </form>
+      <div className="area">
+        <Photos image={data} />
+      </div>
     </div>
   );
 }
