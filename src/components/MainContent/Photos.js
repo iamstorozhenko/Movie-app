@@ -1,10 +1,17 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
+import "./Photos.css";
 
 const Photos = (props) => {
   return (
     <div>
       {props.image.map((image) => (
-        <img className="images" src={image.Poster} alt="movies"></img>
+        <div>
+          <img className="images" src={image.Poster} alt="movies" />
+          <FontAwesomeIcon icon={faHeart} />
+        </div>
       ))}
     </div>
   );

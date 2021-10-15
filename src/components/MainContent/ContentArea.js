@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Photos from "./Photos";
 
+
 import "./MainContent.css";
 
 function MainContent() {
