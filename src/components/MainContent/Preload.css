@@ -1,0 +1,21 @@
+.fa-search {
+  font-size: 70px;
+  color: #ffffff;
+}
+
+.search-film-wrapper {
+  margin-top: 250px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.search-text {
+  margin-left: 20px;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  font-weight: bolder;
+  color: #ffffff;
+}
