@@ -8,7 +8,7 @@ const Photos = (props) => {
   return (
     <div>
       {props.image.map((image) => (
-        <div>
+        <div className="photo-container">
           <img className="images" src={image.Poster} alt="movies" />
           <FontAwesomeIcon icon={faHeart} />
         </div>

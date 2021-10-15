@@ -1,0 +1,12 @@
+
+.fa-heart {
+  color: brown;
+  position: absolute;
+  font-size: 28px;
+  top: 50px;
+  left: 300px;
+}
+
+.photo-container {
+  position: relative;
+}
