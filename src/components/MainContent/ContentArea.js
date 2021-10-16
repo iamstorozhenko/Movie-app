@@ -45,8 +45,8 @@ function MainContent() {
       <div className="area">
         <Photos image={data} />
       </div>
-      {unshowPreload ? <Preload /> : null}
       <Modal active={active} setActive={setActive} />
+      {unshowPreload ? <Preload /> : null}
     </div>
   );
 }
