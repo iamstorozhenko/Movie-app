@@ -3,11 +3,13 @@ import Photos from "./Photos";
 
 import "./MainContent.css";
 import Preload from "./Preload";
+import Modal from "./Modal";
 
 function MainContent() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   const [unshowPreload, setUnShowPreload] = useState(true);
+  const [active, setActive] = useState(true);
 
   const movieReq = async (value) => {
     const url = `https://www.omdbapi.com/?s=${value}&apikey=195d91d3`;
@@ -42,6 +44,7 @@ function MainContent() {
         <Photos image={data} />
       </div>
       {unshowPreload ? <Preload /> : null}
+      <Modal active={active} setActive={setActive} />
     </div>
   );
 }
