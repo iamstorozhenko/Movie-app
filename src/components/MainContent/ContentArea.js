@@ -8,8 +8,8 @@ import Modal from "./Modal";
 function MainContent() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
-  const [unshowPreload, setUnShowPreload] = useState(true);
-  const [active, setActive] = useState(true);
+  const [unshowPreload, setUnShowPreload] = useState(false);
+  const [active, setActive] = useState(false);
 
   const movieReq = async (value) => {
     const url = `https://www.omdbapi.com/?s=${value}&apikey=195d91d3`;
@@ -38,7 +38,9 @@ function MainContent() {
           onClick={clicked}
           onChange={(event) => setValue(event.target.value)}
         />
-        <button className="favourite-btn">Favourite</button>
+        <button className="favourite-btn" onClick={() => setActive(true)}>
+          Favourite
+        </button>
       </div>
       <div className="area">
         <Photos image={data} />

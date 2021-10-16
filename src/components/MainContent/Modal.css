@@ -1,10 +1,27 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0, 0.4);
+  transform: scale(0);
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
 .modal-content {
   height: 350px;
   width: 500px;
   border-radius: 20px;
   background: #5c7aea;
   position: absolute;
-  margin-top: 100px;
+  margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
