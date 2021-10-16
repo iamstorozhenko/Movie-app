@@ -48,6 +48,7 @@ input::placeholder {
   color: #2c2891;
   border: 2px solid #fffd95;
   margin-left: 734px;
+  cursor: pointer;
 }
 
 .images {
