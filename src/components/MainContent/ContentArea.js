@@ -28,8 +28,11 @@ function MainContent() {
 
   const clicked = () => setUnShowPreload(false);
 
+  // Add modal favourite 
+
   return (
     <div className="wrapper">
+      <Modal active={active} setActive={setActive} />
       <div className="search-favourite-wrapper">
         <input
           className="input-search"
@@ -45,7 +48,6 @@ function MainContent() {
       <div className="area">
         <Photos image={data} />
       </div>
-      <Modal active={active} setActive={setActive} />
       {unshowPreload ? <Preload /> : null}
     </div>
   );

@@ -8,6 +8,7 @@ function Modal({ active, setActive }) {
       className={active ? "modal active" : "modal"}
       onClick={() => setActive(false)}
     >
+      <p>Тут что-то будет</p>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}></div>
     </div>
   );
