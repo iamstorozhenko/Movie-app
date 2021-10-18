@@ -1,0 +1,10 @@
+h1 {
+  font-size: 50px;
+  color: #fffd95;
+}
+
+.favourite-area {
+  width: 1200px;
+  height: 200px;
+  background: #fffd95;
+}

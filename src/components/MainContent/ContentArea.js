@@ -3,13 +3,14 @@ import Photos from "./Photos";
 
 import "./MainContent.css";
 import Preload from "./Preload";
-import Modal from "./Modal";
+// import Modal from "./Modal";
+import Favourite from "./Favourite/Favourite";
 
 function MainContent() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   const [unshowPreload, setUnShowPreload] = useState(false);
-  const [active, setActive] = useState(false);
+//   const [active, setActive] = useState(false);
 
   const movieReq = async (value) => {
     const url = `https://www.omdbapi.com/?s=${value}&apikey=195d91d3`;
@@ -28,11 +29,11 @@ function MainContent() {
 
   const clicked = () => setUnShowPreload(false);
 
-  // Add modal favourite 
+  // Add modal favourite
 
   return (
     <div className="wrapper">
-      <Modal active={active} setActive={setActive} />
+      {/* <Modal active={active} setActive={setActive} /> */}
       <div className="search-favourite-wrapper">
         <input
           className="input-search"
@@ -41,14 +42,15 @@ function MainContent() {
           onClick={clicked}
           onChange={(event) => setValue(event.target.value)}
         />
-        <button className="favourite-btn" onClick={() => setActive(true)}>
+        {/* <button className="favourite-btn" onClick={() => setActive(true)}>
           Favourite
-        </button>
+        </button> */}
       </div>
       <div className="area">
         <Photos image={data} />
       </div>
       {unshowPreload ? <Preload /> : null}
+      <Favourite />
     </div>
   );
 }
