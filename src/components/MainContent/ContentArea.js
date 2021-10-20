@@ -4,7 +4,6 @@ import Photos from "./Photos";
 import "./MainContent.css";
 import Preload from "./Preload";
 // import Modal from "./Modal";
-import Favourite from "./Favourite/Favourite";
 
 function MainContent() {
   const [data, setData] = useState([]);
@@ -35,8 +34,6 @@ function MainContent() {
     setFavourites(setNewFavourite);
   };
 
-  // Add modal favourite
-
   return (
     <div className="wrapper">
       {/* <Modal active={active} setActive={setActive} /> */}
@@ -56,9 +53,10 @@ function MainContent() {
         <Photos favouriteClick={addFavourite} image={data} />
       </div>
       {unshowPreload ? <Preload /> : null}
-      <Favourite>
+      <div className="favourite-area">
+        <div className="favourite-header">Favourites</div>
         <Photos favouriteClick={addFavourite} image={favourites} />
-      </Favourite>
+      </div>
     </div>
   );
 }
