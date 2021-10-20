@@ -10,7 +10,8 @@ function MainContent() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   const [unshowPreload, setUnShowPreload] = useState(false);
-//   const [active, setActive] = useState(false);
+  const [favourites, setFavourites] = useState([]);
+  //   const [active, setActive] = useState(false);
 
   const movieReq = async (value) => {
     const url = `https://www.omdbapi.com/?s=${value}&apikey=195d91d3`;
@@ -28,6 +29,11 @@ function MainContent() {
   }, [value]);
 
   const clicked = () => setUnShowPreload(false);
+
+  const addFavourite = (movie) => {
+    const setNewFavourite = [...favourites, movie];
+    setFavourites(setNewFavourite);
+  };
 
   // Add modal favourite
 
@@ -47,10 +53,12 @@ function MainContent() {
         </button> */}
       </div>
       <div className="area">
-        <Photos image={data} />
+        <Photos favouriteClick={addFavourite} image={data} />
       </div>
       {unshowPreload ? <Preload /> : null}
-      <Favourite />
+      <Favourite>
+        <Photos favouriteClick={addFavourite} image={favourites} />
+      </Favourite>
     </div>
   );
 }
