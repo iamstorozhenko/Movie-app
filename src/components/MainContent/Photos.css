@@ -8,4 +8,8 @@
 
 .photo-container {
   position: relative;
+  cursor: pointer;
+}
+
+.photo-container:hover {
 }

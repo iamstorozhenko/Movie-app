@@ -59,3 +59,24 @@ input::placeholder {
   height: 400px;
   width: 300px;
 }
+
+.favourite-header {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fffd95;
+}
+
+.favourite-area {
+  margin-top: 20px;
+  width: 1200px;
+  border-radius: 40px;
+  background: #fffd95;
+}
+
+.favourite-area div {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}

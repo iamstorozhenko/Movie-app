@@ -34,6 +34,13 @@ function MainContent() {
     setFavourites(setNewFavourite);
   };
 
+  const removeFavourite = (movie) => {
+    const newFavList = favourites.filter(
+      (favourites) => favourites.imdbID !== movie.imdbID
+    );
+    setFavourites(newFavList);
+  };
+
   return (
     <div className="wrapper">
       {/* <Modal active={active} setActive={setActive} /> */}
@@ -53,9 +60,9 @@ function MainContent() {
         <Photos favouriteClick={addFavourite} image={data} />
       </div>
       {unshowPreload ? <Preload /> : null}
+      <div className="favourite-header">Favourites</div>
       <div className="favourite-area">
-        <div className="favourite-header">Favourites</div>
-        <Photos favouriteClick={addFavourite} image={favourites} />
+        <Photos favouriteClick={removeFavourite} image={favourites} />
       </div>
     </div>
   );
