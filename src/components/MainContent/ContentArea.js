@@ -42,11 +42,10 @@ function MainContent() {
     const setNewFavourite = [...favourites, movie];
     // setFavourites(setNewFavourite);
     // saveToLocalStorage(setNewFavourite);
-    const uniqueSet = new Set(setNewFavourite);
+    const uniqueSet = new Set(setNewFavourite); // filtered arr
     const backToArr = [...uniqueSet];
     setFavourites(backToArr);
     saveToLocalStorage(backToArr);
-    console.log(setNewFavourite);
   };
 
   const removeFavourite = (movie) => {
@@ -76,7 +75,7 @@ function MainContent() {
         <Photos favouriteClick={addFavourite} image={data} />
       </div>
       {unshowPreload ? <Preload /> : null}
-      <div className="favourite-header">Favourites</div>
+      <div className="favourite-header"> Your favourites &#x1f60e;</div>
       <div className="favourite-area">
         <Photos favouriteClick={removeFavourite} image={favourites} />
       </div>
