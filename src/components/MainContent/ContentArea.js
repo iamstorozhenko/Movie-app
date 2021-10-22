@@ -42,6 +42,7 @@ function MainContent() {
     const setNewFavourite = [...favourites, movie];
     setFavourites(setNewFavourite);
     saveToLocalStorage(setNewFavourite);
+    console.log(setNewFavourite);
   };
 
   const removeFavourite = (movie) => {

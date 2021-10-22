@@ -1,15 +1,18 @@
 .fa-heart {
+  opacity: 0;
   color: #ffffff;
   position: absolute;
-  font-size: 28px;
-  top: 46px;
-  left: 310px;
+  font-size: 80px;
+  color: #f05454;
+  top: 180px;
+  left: 160px;
+  transition: all 0.5s ease;
 }
 
+.fa-heart:hover {
+  opacity: 1;
+}
 .photo-container {
   position: relative;
   cursor: pointer;
-}
-
-.photo-container:hover {
 }
