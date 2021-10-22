@@ -40,8 +40,12 @@ function MainContent() {
 
   const addFavourite = (movie) => {
     const setNewFavourite = [...favourites, movie];
-    setFavourites(setNewFavourite);
-    saveToLocalStorage(setNewFavourite);
+    // setFavourites(setNewFavourite);
+    // saveToLocalStorage(setNewFavourite);
+    const uniqueSet = new Set(setNewFavourite);
+    const backToArr = [...uniqueSet];
+    setFavourites(backToArr);
+    saveToLocalStorage(backToArr);
     console.log(setNewFavourite);
   };
 
