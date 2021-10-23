@@ -15,7 +15,11 @@ const Photos = (props) => {
             src={image.Poster}
             alt="movies"
           />
-          <FontAwesomeIcon icon={faHeart} className="fa-heart" />
+          <FontAwesomeIcon
+            onClick={() => props.favouriteClick(image)}
+            icon={faHeart}
+            className="fa-heart"
+          />
         </div>
       ))}
     </div>
