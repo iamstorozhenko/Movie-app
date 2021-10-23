@@ -27,14 +27,14 @@ function MainContent() {
     movieReq(value);
   }, [value]);
 
-  useEffect(() => {
-    const movieFav = JSON.parse(localStorage.getItem("your-favourite-movies"));
-    setFavourites(movieFav);
-  }, []);
+//   useEffect(() => {
+//     const movieFav = JSON.parse(localStorage.getItem("your-favourite-movies"));
+//     setFavourites(movieFav);
+//   }, []);
 
-  const saveToLocalStorage = (items) => {
-    localStorage.setItem("your-favourite-movies", JSON.stringify(items));
-  };
+//   const saveToLocalStorage = (items) => {
+//     localStorage.setItem("your-favourite-movies", JSON.stringify(items));
+//   };
 
   const clicked = () => setUnShowPreload(false);
 
@@ -45,7 +45,7 @@ function MainContent() {
     const uniqueSet = new Set(setNewFavourite); // filtered arr
     const backToArr = [...uniqueSet];
     setFavourites(backToArr);
-    saveToLocalStorage(backToArr);
+    // saveToLocalStorage(backToArr);
   };
 
   const removeFavourite = (movie) => {
@@ -53,7 +53,7 @@ function MainContent() {
       (favourites) => favourites.imdbID !== movie.imdbID
     );
     setFavourites(newFavList);
-    saveToLocalStorage(newFavList);
+    // saveToLocalStorage(newFavList);
   };
 
   return (
